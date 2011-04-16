@@ -1,4 +1,5 @@
 TestApp02::Application.routes.draw do
+  resources :articles
   get "pages/new"
   get "pages/home"
   
