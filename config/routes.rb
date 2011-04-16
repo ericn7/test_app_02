@@ -1,5 +1,8 @@
 TestApp02::Application.routes.draw do
   resources :articles
+  resources :events
+  resources :photos
+  
   get "pages/new"
   get "pages/home"
   

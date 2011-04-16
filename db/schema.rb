@@ -10,12 +10,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110416215754) do
+ActiveRecord::Schema.define(:version => 20110416224004) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.date     "publish_date"
     t.text     "article_text"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "events", :force => true do |t|
+    t.string   "title"
+    t.date     "event_date"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "photos", :force => true do |t|
+    t.string   "title"
+    t.date     "taken"
     t.integer  "position"
     t.datetime "created_at"
     t.datetime "updated_at"
