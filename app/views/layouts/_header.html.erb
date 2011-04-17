@@ -8,9 +8,14 @@
 	  <td><%= link_to "Articles", articles_path %></td>
 	  <td><%= link_to "Events", events_path %></td>
 	  <td><%= link_to "Photos", photos_path %></td>
-	  <div id="user_nav">  
-  <%= link_to "Sign in with Twitter", "/auth/twitter" %>  
-</div>  
+<div id="user_nav">  
+  <% if current_user %>  
+	Welcome, <%= current_user.name %>!  
+	<%= link_to "Sign Out", signout_path %>  
+  <% else %>  
+	<%= link_to "Sign in with Twitter", "/auth/twitter" %>  
+  <% end %>  
+</div>   
 	</tr>
 	</table>
 
