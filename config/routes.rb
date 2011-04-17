@@ -1,4 +1,7 @@
 TestApp02::Application.routes.draw do
+  
+  match "/auth/:provider/callback" => "sessions#create"
+
   resources :articles do
     resources :comments
   end
@@ -8,6 +11,7 @@ TestApp02::Application.routes.draw do
   resources :photos do
     resources :comments
   end
+  
   
   get "pages/new"
   get "pages/home"
