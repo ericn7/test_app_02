@@ -1,7 +1,13 @@
 TestApp02::Application.routes.draw do
-  resources :articles
-  resources :events
-  resources :photos
+  resources :articles do
+    resources :comments
+  end
+  resources :events do
+    resources :comments
+  end
+  resources :photos do
+    resources :comments
+  end
   
   get "pages/new"
   get "pages/home"
