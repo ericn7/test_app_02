@@ -1,7 +1,11 @@
 TestApp02::Application.routes.draw do
   
-  match "/auth/:provider/callback" => "sessions#create"
+  #match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
+  
+  #add our oauth redirect route - qw
+  match '/auth/:provider/callback', :to => 'sessions#create'
+  match '/auth/failure', :to => 'sessions#fail'
 
   resources :articles do
     resources :comments
