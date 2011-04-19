@@ -14,7 +14,7 @@ require 'forcedotcom'
 if Rails.env.development?
 	OmniAuth.config.full_host = 'https://localhost:3000'
 else
-	OmniAuth.config.full_host = 'https://cold-summer-842.heroku.com/'
+	OmniAuth.config.full_host = 'https://cold-summer-842.heroku.com'
 end
 
 
