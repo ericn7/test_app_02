@@ -3,9 +3,9 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.6'
 gem 'sqlite3-ruby', '1.3.2', :require => 'sqlite3'
 
-gem "omniauth" 
+gem 'omniauth', '0.2.0'
 gem 'httparty'
-gem 'faraday'
+gem 'faraday', '0.5.0'
 
 group :development do
   gem 'rspec-rails', '2.5.0'
