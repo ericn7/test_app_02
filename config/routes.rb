@@ -1,5 +1,10 @@
-TestApp02::Application.routes.draw do
+TestApp02::Application.routes.draw do |map|
+
+  match "/racktest" => HomeApp
+  match "/intuit" => IntuitTest
   
+  
+
   #match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
   
@@ -21,7 +26,14 @@ TestApp02::Application.routes.draw do
   get "pages/new"
   get "pages/home"
   
+  #match "/racktest",  :to => HomeApp
+  #match "/racktest" => HomeApp, :as => :racktest
+  #match "/racktest" => HomeApp
+  
   root :to => "pages#home"
+  #root :to => HomeApp  
+  #root :to => proc { |env| [200, {}, ["Welcome"]] }
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -78,5 +90,5 @@ TestApp02::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+  match ':controller(/:action(/:id(.:format)))'
 end

@@ -7,6 +7,15 @@ gem 'omniauth', '0.2.0'
 gem 'httparty'
 gem 'faraday', '0.5.0'
 
+gem 'XMLCanonicalizer', '1.0.1'
+gem 'ruby-saml'
+
+#Intuit gems
+gem 'sinatra'
+gem 'hpricot'
+#gem 'ostruct'
+#gem 'xml'
+
 group :development do
   gem 'rspec-rails', '2.5.0'
 end

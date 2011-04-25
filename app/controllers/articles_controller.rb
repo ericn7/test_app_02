@@ -1,9 +1,11 @@
+#require 'TestIntuit'
+
 class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.xml
   def index
     @articles = Article.all
-
+    #render :text => TestIntuit.test_consumer.inspect
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @articles }

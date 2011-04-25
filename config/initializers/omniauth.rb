@@ -1,12 +1,5 @@
-#Rails.application.config.middleware.use OmniAuth::Builder do  
-#  provider :twitter, 'AJ7xYWxisrwQwB8eU1dYFA', 'hcDpmgmR26PkHwTr5A9x0frqXzAsV2NszEhIRZNEMSw'  
-#end  
-
-
 
 require 'forcedotcom'
-
-
 
 # Set the default hostname for omniauth to send callbacks to.
 # seems to be a bug in omniauth that it drops the httpS
@@ -17,15 +10,12 @@ else
 	OmniAuth.config.full_host = 'https://cold-summer-842.heroku.com'
 end
 
-
-
 module OmniAuth
   module Strategies
 	#tell omniauth to load our strategy
 	autoload :Forcedotcom, 'lib/forcedotcom'
   end
 end
-
 
 Rails.application.config.middleware.use OmniAuth::Builder do
 
