@@ -65,6 +65,7 @@ post '*' do
   end
 
   # Display customer list in the Intuit Workplace iframe
-  erb :index
+  "Complete"
+  #erb :index
 end
 end  
