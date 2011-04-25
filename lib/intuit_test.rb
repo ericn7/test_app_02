@@ -8,6 +8,8 @@ require 'httparty'
 require 'hpricot'
 require 'ostruct'
 require 'lib/intuit_saml.rb'
+
+set :environment, :development
  
 # APP_DBID is your unique app id
 # When running your app in workplace the APP_DBID is displayed in the URL field
