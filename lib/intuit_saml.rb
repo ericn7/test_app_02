@@ -56,7 +56,9 @@ module Intuit
 	#  )
 	def initialize params
 	  @saml_doc = LibXML::XML::Parser.string( params[:saml_xml] ).parse
-	  @private_key = OpenSSL::PKey::RSA.new( params[:private_key] )
+	  #@private_key = OpenSSL::PKey::RSA.new( params[:private_key] )
+	  @private_key = OpenSSL::PKey::RSA.new(File.open("lib/certs/server.key").read)
+					   
 	end
 
 	# extracts the IPP API ticket from the SAML document
