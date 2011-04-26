@@ -72,6 +72,26 @@ post '*' do
 
   # Display customer list in the Intuit Workplace iframe
   "Complete"
-  #erb :index
+  erb :index
 end
+######
+__END__
+
+@@ layout
+<html>
+  <body>
+	<%= yield %>
+  </body>
+</html>
+
+@@ index
+<h1>Customers</h1>
+<ul>
+  <% for customer in @customers %>
+	<li><%= h customer.name %></li>
+  <% end %>
+</ul>
+
+######
+
 end  
