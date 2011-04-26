@@ -12,6 +12,7 @@
 require 'base64'
 require 'openssl'
 #require 'xml'
+require 'hpricot'
 
 module Intuit
 
