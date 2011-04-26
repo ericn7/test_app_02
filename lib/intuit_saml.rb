@@ -9,10 +9,17 @@
 #    Nathan Smith - initial AES-128-CBC-only, non-validating implementation
 #
 ###############################################################################
+require 'sinatra'
+require 'rubygems'
+
 require 'base64'
 require 'openssl'
-require 'xml'
-require 'hpricot'
+#require 'xml'
+
+
+
+#require 'libxml2'
+#require 'hpricot'
 
 module Intuit
 
