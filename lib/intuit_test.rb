@@ -29,6 +29,10 @@ helpers do
   alias_method :h, :escape_html
 end
 
+get "*" do  
+  private_key 
+end  
+
 # IPP will post the SAML message to this endpoint when app is loaded in Workplace
 post '*' do
   # Grab SAML message passed from IPP
