@@ -16,7 +16,8 @@ gem 'hpricot'
 #gem 'ostruct'
 #gem 'xml'
 
-gem 'nokogiri'
+#gem 'nokogiri'
+gem 'libxml-ruby'
 
 group :development do
   gem 'rspec-rails', '2.5.0'

@@ -45,6 +45,7 @@ GEM
     httparty (0.7.6)
       crack (= 0.1.8)
     i18n (0.5.0)
+    libxml-ruby (2.0.2-x86-mingw32)
     log4r (1.1.9)
     macaddr (1.0.0)
     mail (2.2.16)
@@ -166,7 +167,7 @@ DEPENDENCIES
   faraday (= 0.5.0)
   hpricot
   httparty
-  nokogiri
+  libxml-ruby
   omniauth (= 0.2.0)
   rails (= 3.0.6)
   rspec (= 2.5.0)

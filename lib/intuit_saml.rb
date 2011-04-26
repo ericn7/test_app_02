@@ -14,7 +14,8 @@ require 'rubygems'
 
 require 'base64'
 require 'openssl'
-#require 'xml'
+
+require 'xml'
 
 
 
