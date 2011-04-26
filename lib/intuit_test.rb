@@ -73,7 +73,8 @@ post '*' do
   # Display customer list in the Intuit Workplace iframe
   #"Complete"
   
-  render :text => @customers.inspect
+  #render :text => @customers.inspect
+  @customers.inspect
   
   #erb :index
   
