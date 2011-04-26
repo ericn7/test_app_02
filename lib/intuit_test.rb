@@ -71,10 +71,10 @@ post '*' do
   end
 
   # Display customer list in the Intuit Workplace iframe
-  "Complete"
+  #"Complete"
   erb :index
 end
-######
+
 __END__
 
 @@ layout
@@ -92,6 +92,6 @@ __END__
   <% end %>
 </ul>
 
-######
+
 
 end  
